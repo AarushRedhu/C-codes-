@@ -173,7 +173,26 @@ int main() </br>
 Last digit of the number = 5</br>
 </p>
 <h3>Enter a decimal number from the user (float) and print the right hand side of the decimal point ?</h3>
+	<p1>CODE</p1>
+<p>#include &lt;stdio.h&gt; <br>
 
+void main()<br>
+{<br>
+	float num;<br>
+	int a;<br>
+	
+	printf("Enter a decimal number: ");<br>
+	scanf("%f",&num);<br>
+	a = num ;<br>
+	num = num - a;<br>
+	num = num*100;<br>
+	a=num;<br>
+
+	printf("Decimal part = %d",a);<br>
+}</p>
+	<p1>OUTPUT</p1>
+	<P>Enter a decimal number: 52.63 <br>
+Decimal part = 63</P>
 <h3>Enter a number from user and find out cube of numbers ?</h3>
 <p1>CODE</p1>
 <p>#include &lt;stdio.h&gt; </br>
