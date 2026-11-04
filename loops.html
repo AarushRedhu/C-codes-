@@ -1,0 +1,750 @@
+<html>
+<head>
+<title>ITERATIVE CONTROL STRUCTURE (LOOPS)</title>
+</head>
+<style>
+ html,body{
+background: linear-gradient(135deg, #F8F5FF, #E9DDFB, #DCEBFA);
+background-attachment: fixed;
+}
+h1{
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: #312E81;
+    text-align: center;
+}
+h3{font-family: 'Trebuchet MS', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: #3730A3;
+	}
+p1{font-size:18px;
+   font-weight:bold;
+   }
+ 
+p{
+  border: 2px solid #5B21B6;
+    padding: 15px;
+    border-radius: 10px;
+}
+</style>
+<body>
+    <h1>ITERATIVE CONTROL STRUCTURE (LOOPS)</h1>
+
+<h3>Enter a number from the user and find out the binary of that number </h3>
+<p1>CODE</p1>
+<p>
+#include &lt;stdio.h&gt;<br>
+void main()<br>
+{<br>
+    int n, rem, binary = 0, place = 1;<br>
+
+    printf("Enter a number: ");<br>
+    scanf("%d", &n);<br>
+
+    while(n > 0)<br>
+    {<br>
+        rem = n % 2;<br>
+        binary = binary + rem * place;<br>
+        place = place * 10;<br>
+        n = n / 2;<br>
+    }<br>
+
+    printf("Binary number = %d", binary);<br>
+}
+</p>
+<p1>OUTPUT</p1>
+<p>Enter a number: 10<br>
+Binary number = 1010</p>
+
+<h3>Enter a number from the user and check that the number is divisible by any prime number or not</h3>
+
+<p1>CODE</p1>
+<p>#include &lt;stdio.h&gt; <br>
+void main()<br>
+{<br>
+    int number, divisor = 2, found = 0;<br>
+
+    printf("Enter a number: ");<br>
+    scanf("%d", &number);<br>
+
+    while(divisor < number)<br>
+    {<br>
+        if(number % divisor == 0)<br>
+        {<br>
+            found = 1;<br>
+        }<br>
+
+        divisor++;<br>
+    }<br>
+
+    if(found == 1)<br>
+    {<br>
+        printf("Divisible by a prime number");<br>
+    }<br>
+    else<br>
+    {<br>
+        printf("Not divisible by any prime number");<br>
+    }<br>
+}</p>
+<P1>OUTPUT</P1>
+<p>Enter a number: 15<br>
+Divisible by a prime number</p>
+
+<h3>Enter a number from the user and check it is a prime number or not </h3>
+<p1>CODE</p1>
+#include &lt;stdio.h&gt; <br>
+void main()<br>
+{<br>
+    int n,i,flag=0;<br>
+
+    printf("Enter a number: ");<br>
+    scanf("%d",&n);<br>
+
+    if(n<=1)<br>
+        flag=1;<br>
+
+    for(i=2;i&lt;n;i++)<br>
+    {<br>
+        if(n%i==0)<br>
+        {<br>
+            flag=1;<br>
+            break;<br>
+        }<br>
+    }<br>
+
+    if(flag==0)<br>
+        printf("Prime number");<br>
+    else<br>
+        printf("Not a prime number");<br>
+}</p>
+<p1>CODE</p1>
+<P>Enter a number: 1<br>
+Not a prime number</P>
+
+<h3>Enter a number from the user and print all digit of the number in separate line</h3>
+<p1>CODE</p1>
+<p>
+#include &lt;stdio.h&gt;<br>
+void main()<br>
+{<br>
+    int number, digit;<br>
+
+    printf("Enter a number: ");<br>
+    scanf("%d", &number);<br>
+
+    while(number > 0)<br>
+    {<br>
+        digit = number % 10;<br>
+
+        printf("%d\n", digit);<br>
+
+        number = number / 10;<br>
+    }<br>
+}
+</p>
+<p1>OUTPUT</p1>
+<p>Enter a number: 1234<br>
+4<br>
+3<br>
+2<br>
+1</p>
+
+<h3>Write a program to print your name 1 lakh times</h3>
+<P1>CODE</P1>
+<P>
+#include &lt;stdio.h&gt;<br>
+void main()<br>
+{<br>
+    int i;<br>
+
+    for(i = 1; i <= 100000; i++)<br>
+    {<br>
+        printf("AARUSH\n");<br>
+    }<br>
+}
+</P>
+<p1>CODE</p1>
+<p>AARUSH<br>
+   AARUSH(1LAKH TIMES)
+</p>
+
+<h3>Write a program to print a series 1 to 1 lakh </h3>
+<p1>CODE</p1>
+<p>
+#include &lt;stdio.h&gt;
+void main()<br>
+{<br>
+    int i;<br>
+
+    for(i = 1; i <= 100000; i++)<br>
+    {<br>
+        printf("%d\n", i);<br>
+    }<br>
+}
+</p>
+<P1>OUTPUT</P1>
+<p>1<br>
+2<br>
+3<br>
+4<br>
+5<br>
+6<br>
+7<br>
+8<br>
+9<br>
+10<br>
+...<br>
+100000</p>
+
+<h3>Enter a number from the user and print the series from 1 to that number</h3>
+<p1>CODE</p1>
+<p>
+#include &lt;stdio.h&gt;<br>
+void main()<br>
+{<br>
+    int number, i;<br>
+
+    printf("Enter a number: ");<br>
+    scanf("%d", &number);<br>
+
+    for(i = 1; i <= number; i++)<br>
+    {<br>
+        printf("%d\n", i);<br>
+    }<br>
+}
+</p>
+<p1>OUTPUT</p1>
+<p>Enter a number: 5<br>
+1<br>
+2<br>
+3<br>
+4<br>
+5</p>
+
+<h3>Enter a number from the user and print that number 100 time</h3>
+<p1>CODE</p1>
+<p>
+#include &lt;stdio.h&gt;<br>
+void main()<br>
+{<br>
+    int number, i;<br>
+
+    printf("Enter a number: ");<br>
+    scanf("%d", &number);<br>
+
+    for(i = 1; i <= 100; i++)<br>
+    {<br>
+        printf("%d\n", number);<br>
+    }<br>
+}
+</p>
+<p1>OUTPUT</p1>
+<p>Enter a number: 8<br>
+8<br>
+8<br>
+8<br>
+8<br>
+...<br>
+(Printed 100 times)</p>
+ <h3>
+#include &lt;stdio.h&gt;<br>
+void main()<br>
+{<br>
+    int i;<br>
+
+    for(i = 1; i <= 100; i++)<br>
+    {<br>
+        if(i % 2 != 0)<br>
+        {<br>
+            printf("%d\n", i);<br>
+        }<br>
+    }<br>
+}
+</h3>
+<p1>CODE</p1>
+<p>1<br>
+3<br>
+5<br>
+7<br>
+9<br>
+11<br>
+13<br>
+15<br>
+...<br>
+95<br>
+97<br>
+99</p>
+
+<h3>Write a program print the table of 4 in the format given as below (till 20)? 4*1=4 and so on</h3>
+<p1>CODE</p1>
+<p>
+#include &lt;stdio.h&gt;<br>
+void main()<br>
+{<br>
+    int i;<br>
+
+    for(i = 1; i <= 20; i++)<br>
+    {<br>
+        printf("4 * %d = %d\n", i, 4 * i);<br>
+    }<br>
+}
+</p>
+<p1>OUTPUT</p1>
+<p>4 * 1 = 4<br>
+4 * 2 = 8<br>
+4 * 3 = 12<br>
+4 * 4 = 16<br>
+4 * 5 = 20<br>
+4 * 6 = 24<br>
+4 * 7 = 28<br>
+4 * 8 = 32<br>
+4 * 9 = 36<br>
+4 * 10 = 40<br>
+...<br>
+4 * 20 = 80</p>
+
+<h3>Enter a number from the user if the user enter 1 then you will perform addition operation by entering 2 number from user add it and display answer. if user enter 2 then subtract or if user enter 3 then multiply or if user enter 4 then divide or if user enter 5 then modulo or if any other number then print invalid .if user want to quit the program then user will enter Q</h3>
+<p1>CODE</p1>
+<p>
+#include &lt;stdio.h&gt;<br>
+void main()<br>
+{<br>
+    int choice, a, b;<br>
+    char ch;<br>
+
+    do<br>
+    {<br>
+        printf("\n1. Addition");<br>
+        printf("\n2. Subtraction");<br>
+        printf("\n3. Multiplication");<br>
+        printf("\n4. Division");<br>
+        printf("\n5. Modulo");<br>
+        printf("\nQ. Quit");<br>
+
+        printf("\nEnter your choice: ");<br>
+        scanf(" %c", &ch);<br>
+
+        if(ch == 'Q' || ch == 'q')<br>
+        {<br>
+            printf("Program ended");<br>
+        }<br>
+        else<br>
+        {<br>
+            choice = ch - '0';<br>
+
+            if(choice >= 1 && choice <= 5)<br>
+            {<br>
+                printf("Enter two numbers: ");<br>
+                scanf("%d%d", &a, &b);<br>
+
+                if(choice == 1)<br>
+                    printf("Addition = %d", a + b);<br>
+
+                else if(choice == 2)<br>
+                    printf("Subtraction = %d", a - b);<br>
+
+                else if(choice == 3)<br>
+                    printf("Multiplication = %d", a * b);<br>
+
+                else if(choice == 4)<br>
+                {<br>
+                    if(b != 0)<br>
+                        printf("Division = %d", a / b);<br>
+                    else<br>
+                        printf("Division by zero is not possible");<br>
+                }<br>
+
+                else if(choice == 5)<br>
+                {<br>
+                    if(b != 0)<br>
+                        printf("Modulo = %d", a % b);<br>
+                    else<br>
+                        printf("Modulo by zero is not possible");<br>
+                }<br>
+            }<br>
+            else<br>
+            {<br>
+                printf("Invalid choice");<br>
+            }<br>
+        }<br>
+
+    } while(ch != 'Q' && ch != 'q');<br>
+}<br>
+</p>
+<p1>CODE</p1>
+<p>1. Addition<br>
+2. Subtraction<br>
+3. Multiplication<br>
+4. Division<br>
+5. Modulo<br>
+Q. Quit<br>
+Enter your choice: 1<br>
+
+Enter two numbers: 10 5<br>
+Addition = 15<br>
+
+1. Addition<br>
+2. Subtraction<br>
+3. Multiplication<br>
+4. Division<br>
+5. Modulo<br>
+Q. Quit<br>
+Enter your choice: 3<br>
+
+Enter two numbers: 10 5<br>
+Multiplication = 50<br>
+Program ended</p>
+
+<h3>Enter the number from user and check its palindrome or not</h3>
+<p1>CODE</p1>
+<P>
+#include &lt;stdio.h&gt;<br>
+void main()<br>
+{<br>
+    int number, original, digit, reverse = 0;<br>
+
+    printf("Enter a number: ");<br>
+    scanf("%d", &number);<br>
+
+    original = number;<br>
+
+    while(number > 0)<br>
+    {<br>
+        digit = number % 10;<br>
+
+        reverse = reverse * 10 + digit;<br>
+
+        number = number / 10;<br>
+    }<br>
+
+    if(original == reverse)<br>
+    {<br>
+        printf("Palindrome number");<br>
+    }<br>
+    else<br>
+    {<br>
+        printf("Not a palindrome number");<br>
+    }<br>
+}
+</P>
+<p1>OUTPUT</p1>
+<P>Enter a number: 123<br>
+Not a palindrome number</P>
+
+<h3>Enter two numbers from users, one is base and second is power. Write the result</h3>
+<p1>CODE</p1>
+<p>
+#include &lt;stdio.h&gt;<br>
+void main()<br>
+{<br>
+    int base, power, i, result = 1;<br>
+
+    printf("Enter base: ");<br>
+    scanf("%d", &base);<br>
+
+    printf("Enter power: ");<br>
+    scanf("%d", &power);<br>
+
+    for(i = 1; i <= power; i++)<br>
+    {<br>
+        result = result * base;<br>
+    }<br>
+
+    printf("Result = %d", result);<br>
+}
+</p>
+<p1>CODE</p1>
+<p>Enter base: 2<br>
+Enter power: 3<br>
+Result = 8</p>
+
+<h3>Enter a number from user and print first digit of number</h3>
+<p1>CODE</p1>
+<P>
+&lt;stdio.h&gt;<br>
+void main()<br>
+{<br>
+    int number;<br>
+
+    printf("Enter a number: ");<br>
+    scanf("%d", &number);<br>
+
+    while(number >= 10)<br>
+    {<br>
+        number = number / 10;<br>
+    }<br>
+
+    printf("First digit = %d", number);<br>
+}<br>
+</P>
+<p1>OUTPUT</p1>
+<p>Enter a number: 563<br>
+First digit = 5</p>
+
+<h3>Enter a number from user and print total from 0 to that number</h3>
+<p1>CODE</p1>
+<p>#include &lt;stdio.h&gt;<br>
+void main()<br>
+{<br>
+    int number, i, sum = 0;<br>
+
+    printf("Enter a number: ");<br>
+    scanf("%d", &number);<br>
+
+    for(i = 0; i <= number; i++)<br>
+    {<br>
+        sum = sum + i;<br>
+    }<br>
+
+    printf("Total = %d", sum);<br>
+}</p>
+<p1>OUTPUT</p1>
+<p>Enter a number: 5<br>
+Total = 15
+</p>
+
+<h3>Enter a number from user and find out factorial of that number </h3>
+<p1>CODE</p1>
+<p>
+#include &lt;stdio.h&gt;<br>
+void main()<br>
+{<br>
+    int number, i, factorial = 1;<br>
+
+    printf("Enter a number: ");<br>
+    scanf("%d", &number);<br>
+
+    if(number < 0)<br>
+    {
+        printf("Factorial is not possible");<br>
+    }<br>
+    else<br>
+    {<br>
+        for(i = 1; i <= number; i++)<br>
+        {<br>
+            factorial = factorial * i;<br>
+        }<br>
+
+        printf("Factorial = %d", factorial);<br>
+    }<br>
+}
+</p>
+<p1>OUTPUT</p1>
+<p>Enter a number: 4<br>
+Factorial = 24</p>
+
+<h3>Enter two numbers from user and print range from first number to second number</h3>
+<p1>CODE</p1>
+<p>
+#include &lt;stdio.h&gt;<br>
+void main()<br>
+{<br>
+    int first, second, i;<br>
+
+    printf("Enter first number: ");<br>
+    scanf("%d", &first);<br>
+
+    printf("Enter second number: ");<br>
+    scanf("%d", &second);<br>
+
+    for(i = first; i <= second; i++)<br>
+    {<br>
+        printf("%d\n", i);<br>
+    }<br>
+}
+</p>
+<p1>OUTPUT</p1>
+<p>Enter first number: 5<br>
+Enter second number: 10<br>
+
+5<br>
+6<br>
+7<br>
+8<br>
+9<br>
+10</p>
+
+<h3>Enter password from user maximum 20 digits / character press enter key if you want to exit</h3>
+<p1>CODE</p1>
+<P>#include&lt;stdio.h&gt;<br>
+#include&lt;conio.h&gt;<br>
+#include&lt;dos.h&gt;<br>
+
+void main()<br>
+{<br>
+    char pass[21], ch;<br>
+    int i=0;<br>
+    clrscr();<br>
+
+    printf("Enter password: ");<br>
+
+    while(i&lt;20)<br>
+    {<br>
+        ch=getch();<br>
+
+        if(ch==13)<br>
+            break;<br>
+
+        pass[i]=ch;<br>
+        printf("*");<br>
+        i++;<br>
+    }<br>
+
+    pass[i]='\0';<br>
+
+    printf("\nPassword entered");<br>
+    delay(2000);
+}</P>
+<P1>OUTPUT</P1>
+<P>Enter password: hello123<br>
+Password entered: hello123<br>
+Program ended.</P>
+
+<h3>Write a program to print the counting 1 to 100 with one second delay</h3>
+<p1>CODE</p1>
+<P>#include &lt;stdio.h&gt;<br>
+#include &lt;conio.h&gt;<br>
+#include &lt;dos.h&gt;<br>
+<br>
+void main()<br>
+{<br>
+    int i;<br>
+<br>
+    clrscr();<br>
+<br>
+    for(i = 1; i <= 100; i++)<br>
+    {<br>
+        printf("%d\n", i);<br>
+        delay(1000);<br>
+    }<br>
+}<br></P>
+<p1>OUTPUT</p1>
+<p>1<br>
+2<br>
+3<br>
+4<br>
+5<br>
+...<br>
+100</p>
+
+<h3>Write a program to find out the Fibonacci series/ 1 to 100 (like 0 1 1 2 3 5 8 13………..)</h3>
+<P1>CODE</P1>
+<p>#include &lt;stdio.h<br>
+#include  &lt;conio.h&gt;<br>
+
+void main()<br>
+{<br>
+    int first = 0, second = 1, next;<br>
+
+    clrscr();<br>
+
+    while(first <= 100)<br>
+    {<br>
+        printf("%d ", first);<br>
+
+        next = first + second;<br>
+        first = second;<br>
+        second = next;<br>
+    }<br>
+}</p>
+<p1>OUTPUT</p1>
+<p>0 1 1 2 3 5 8 13 21 34 55 89</p>
+
+<h3>Enter a character from user and that character should be alphabet</h3>
+<p1>CODE</p1>
+<p>#include &lt;stdio.h<br>
+#include &lt;conio.h&gt;<br>
+
+void main()<br>
+{<br>
+    char ch;<br>
+
+    clrscr();<br>
+
+    do<br>
+    {<br>
+        printf("Enter a character: ");<br>
+        scanf(" %c", &ch);<br>
+
+        if((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z'))<br>
+        {<br>
+            printf("It is an alphabet.");<br>
+        }<br>
+        else<br>
+        {<br>
+            printf("It is not an alphabet.");<br>
+        }<br>
+
+    } while(0);<br>
+}</p>
+<p1>OUTPUT</p1>
+<p>Enter a character: 5<br>
+It is not an alphabet.</p>
+
+<h3>Check numbers from user is palindrome or not</h3>
+<p1>CODE</p1>
+<p>#include &lt;stdio.h<br>
+#include &lt;conio.h&gt;<br>
+
+
+void main()<br>
+{<br>
+    int number, original, reverse = 0, digit;<br>
+
+    clrscr();<br>
+
+    printf("Enter a number: ");<br>
+    scanf("%d", &number);<br>
+
+    original = number;<br>
+
+    while(number > 0)<br>
+    {<br>
+        digit = number % 10;<br>
+        reverse = reverse * 10 + digit;<br>
+        number = number / 10;<br>
+    }<br>
+
+    if(original == reverse)<br>
+    {<br>
+        printf("Number is Palindrome.");<br>
+    }<br>
+    else<br>
+    {<br>
+        printf("Number is not Palindrome.");<br>
+    }<br>
+}</p>
+<p1>OUTPUT</p1>
+<p>Enter a number: 121<br>
+Number is Palindrome.</p>
+
+<h3>Enter a number from user and check it is Armstrong number or not</h3>
+<p1>CODE</p1>
+<P>#include &lt;stdio.h&gt;<br>
+#include &lt;conio.h&gt;<br>
+void main()<br>
+{<br>
+    int n, a, b, c, sum;<br>
+    clrscr();<br>
+
+    printf("Enter a 3-digit number: ");<br>
+    scanf("%d", &n);<br>
+
+    a = n % 10;<br>
+    b = (n / 10) % 10;<br>
+    c = n / 100;<br>
+
+    sum = a*a*a + b*b*b + c*c*c;<br>
+
+    if(n>=100 && n<=999 && sum==n)<br>
+        printf("Armstrong number");<br>
+    else<br>
+        printf("Not Armstrong number");<br>
+}
+</P>
+<p1>OUTPUT</p1>
+<P>Enter a number: 153<br>
+Armstrong Number</P>
+</html>

@@ -1,0 +1,149 @@
+<html>
+<head>
+<title>RECURSION</title>
+</head>
+<style>
+ html,body{
+background: linear-gradient(135deg, #F8F5FF, #E9DDFB, #DCEBFA);
+background-attachment: fixed;
+}
+h1{
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: #312E81;
+    text-align: center;
+}
+h3{font-family: 'Trebuchet MS', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: #3730A3;
+	}
+p1{font-size:18px;
+   font-weight:bold;
+   }
+ 
+p{
+  border: 2px solid #5B21B6;
+    padding: 15px;
+    border-radius: 10px;
+}
+</style> 
+<body>
+    <h1>RECURSION</h1>
+    <h3>Write a program of recursion and display the output</h3>
+    <p1>CODE</p1>
+<p>#include &lt;stdio.h&gt;<br>
+#include &lt;conio.h&gt;<br>
+
+int fact(int n)<br>
+{<br>
+    if(n == 1)<br>
+    {<br>
+        return 1;<br>
+    }<br>
+    else<br>
+    {<br>
+        return n * fact(n - 1);<br>
+    }<br>
+}
+<br>
+void main()<br>
+{<br>
+    int num, ans;<br>
+
+    clrscr();
+<br>
+    printf("Enter a number: ");<br>
+    scanf("%d", &num);<br>
+
+    ans = fact(num);<br>
+
+    printf("Factorial = %d", ans);<br>
+
+    getch();<br>
+}
+</p>
+<p1>OUTPUT</p1>
+<p>Enter a number: 4<br>
+Factorial = 24</p>
+
+<h3>Write a program of recursion with global variable and display the output</h3>
+<p1>CODE</p1>
+<p>#include &lt;stdio.h&gt;<br>
+#include &lt;conio.h&gt;<br>
+
+int num;<br>
+
+int fact()<br>
+{<br>
+    if(num == 1)<br>
+    {<br>
+        return 1;<br>
+    }<br>
+    else<br>
+    {<br>
+        return num * fact(--num);<br>
+    }<br>
+}<br>
+
+void main()<br>
+{<br>
+    int ans;<br>
+
+    clrscr();<br>
+
+    printf("Enter a number: ");<br>
+    scanf("%d", &num);<br>
+
+    ans = fact();<br>
+
+    printf("Factorial = %d", ans);<br>
+
+    getch();<br>
+}<br></p>
+
+<p1>OUTPUT</p1>
+<p>Enter a number: 4<br>
+Factorial = 24</p>
+
+<h3>Write a program of recursion with local variable and display the output</h3>
+<p1>CODE</p1>
+<p>#include &lt;stdio.h&gt;<br>
+#include &lt;conio.h&gt;<br>
+int sum(int n)<br>
+{<br>
+    int result;<br>
+
+    if(n == 1)<br>
+    {<br>
+        return 1;<br>
+    }<br>
+    else<br>
+    {<br>
+        result = n + sum(n - 1);<br>
+        return result;<br>
+    }<br>
+}<br>
+
+void main()<br>
+{<br>
+    int num, ans;<br>
+
+    clrscr();<br>
+
+    printf("Enter a number: ");<br>
+    scanf("%d", &num);<br>
+
+    ans = sum(num);<br>
+
+    printf("Sum = %d", ans);<br>
+
+    getch();<br>
+}
+</p>
+<p1>OUTPUT</p1>
+<p>Enter a number: 4<br>
+Sum = 10</p>
+</body>
+</html>

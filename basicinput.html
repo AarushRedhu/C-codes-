@@ -1,0 +1,224 @@
+<html>
+<head>
+<title>BASIC INPUT OUTPUT</title>
+</head>
+<style>
+ html,body{
+background: linear-gradient(135deg, #F8F5FF, #E9DDFB, #DCEBFA);
+background-attachment: fixed;
+}
+h1{
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: #312E81;
+    text-align: center;
+}
+h3{font-family: 'Trebuchet MS', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: #3730A3;
+	}
+p1{font-size:18px;
+   font-weight:bold;
+   }
+ 
+p{
+  border: 2px solid #5B21B6;
+    padding: 15px;
+    border-radius: 10px;
+}
+</style>
+<body>
+    <h1>BASIC INPUT OUTPUT</h1>
+
+    <h3>Write a program to show that example of input and output ?</h3>
+    <p1>CODE</p1>
+    <p> #include &lt;stdio.h&gt; <br>
+
+void main()<br>
+{<br>
+    printf("Today I made my first C Program."); <br>
+
+}
+</p>
+<p1>OUTPUT</p1>
+<p>Today I made my first C Program.</p>
+ 
+<h3>Write a program to read a character from the keyboard and display it on the screen.</h3>
+    <p1>CODE</p1>
+    <p> #include &lt;stdio.h&gt; <br>
+
+void main()<br>
+{<br>
+    char c;<br>
+    printf("Enter a character: ");<br>
+    scanf("%c", &c);<br>
+    printf("You entered: %c", c);<br>
+}
+</p>
+    <p1>OUTPUT</p1>
+    <p>Enter a character: A<br>
+You entered: A</p>
+
+<h3>Write a program to read only 4 characters from the keyboard and display it on the screen in a separate line.</h3>
+    <p1>CODE</p1>
+   
+<h3>Write a program to print your name at center of the first line?</h3>    
+    <p1>CODE</p1>
+    <p> #include &lt;stdio.h&gt; <br>
+void main()<br> 
+{<br>
+    printf("\t\t\t\tAARUSH");<br>
+    
+}
+</p>
+    <p1>OUTPUT</p1>
+    <p>                                AARUSH</p>
+
+<h3>Write a program to store single quote and print that variable to show single quote on output screen.</h3>    
+<p1>CODE</p1>
+    <p> #include &lt;stdio.h&gt; <br>
+        void main()<br>
+{<br>
+    char ch = '\'';<br>
+
+    printf("%c", ch);<br>
+
+}
+<p1>OUTPUT</p1>
+    <p>'</p>    
+
+<h3>Write a program for printing your name on output screen but your name should blink 5 times</h3>
+<p1>CODE</p1>
+<p>#include &lt;stdio.h&gt; <br>
+   #include &lt;dos.h&gt;<br>
+   #include &lt;conio.h&gt;<br>
+void main()<br>
+{<br>
+    int i;<br>
+    for (i = 1; i <= 5; i++)<br>
+    {<br>
+        printf("AARUSH");<br>
+        delay(500);<br>
+        clrscr();<br>
+        delay(500);<br>
+    }<br>
+
+}
+</p>
+<p1>OUTPUT</p1>
+    <p>AARUSH (blinks 5 times)</p>  
+
+<h3>Write the program to display this output ?<br>
+#include<br>
+#include<br>
+#include<br>
+void main ()<br>
+{<br>
+clrscr();<br>
+printf(“hello,welcome to c”);<br>
+delay(5000);<br>
+}</h3>    
+<p1>CODE</p1>
+<p>#include &lt;stdio.h&gt; <br>
+#include &lt;conio.h&gt;<br>
+#include &lt;dos.h&gt;<br>
+void main ()<br>
+{<br>
+clrscr();<br>
+printf(“hello,welcome to c”);<br>
+delay(5000);<br>
+}
+</p>
+<p1>OUTPUT</p1>
+<p>hello,welcome to c</p>
+<h3>C Program to Print Your Name at the Center of the Screen</h3>
+<p1>CODE</p1>
+<p>#include &lt;stdio.h&gt; <br>    
+   #include &lt;conio.h&gt;<br>
+
+void main()<br>
+{<br>
+    clrscr();<br>
+
+    gotoxy(40, 12);<br>
+    printf("AARUSH");<br>
+   
+} 
+</p>
+<p1>OUTPUT</p1>
+<p>Name will appear at the center of the screen</p>
+
+<h3>Enter password display like ****** ?</h3>
+<p1>CODE</p1>
+<p>#include &lt;stdio.h&gt;<br>
+#include &lt;conio.h&gt;<br>
+
+void main()<br>
+{<br>
+    char ch;<br>
+
+    clrscr();<br>
+
+    printf("Enter password: ");<br>
+
+    ch = getch();<br>
+    printf("*");<br>
+
+    ch = getch();<br>
+    printf("*");<br>
+
+    ch = getch();<br>
+    printf("*");<br>
+
+    ch = getch();<br>
+    printf("*");<br>
+
+    ch = getch();<br>
+    printf("*");<br>
+
+    ch = getch();<br>
+    printf("*");<br>
+
+}</p>
+<p1>OUTPUT</p1>
+<p>Enter password: ******</p>
+ 
+<h3>Enter two character from user and print ASCII value ?</h3>
+<p1>CODE</p1>
+<p>#include &lt;stdio.h&gt;<br>
+
+void main()<br>
+{<br>
+    char ch1, ch2;<br>
+
+    printf("Enter two characters: ");<br>
+    scanf("%c %c", &ch1, &ch2);<br>
+
+    printf("ASCII value of %c = %d\n", ch1, ch1);<br>
+    printf("ASCII value of %c = %d\n", ch2, ch2);<br>
+
+}</p>
+<p1>OUTPUT</p1>
+<p>Enter two characters: A B<br>
+ASCII value of A = 65<br>
+ASCII value of B = 66<br>
+</p>
+
+<h3>Print all ASCII character 0 to 127 ?</h3>
+<p1>CODE</p1>
+<p>#include &lt;stdio.h&gt;<br>
+
+void main()<br>
+{<br>
+    int i;<br>
+
+    for (i = 0; i <= 127; i++)<br>
+    {<br>
+        printf("%c\n", i);<br>
+    }<br>
+
+}</p>
+<p1>OUTPUT</p1>
+<p> (All ASCII characters from 0 to 127) <br></p>    

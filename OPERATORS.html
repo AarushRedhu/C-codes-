@@ -1,0 +1,310 @@
+<html>
+<head>
+<title>Operators</title>
+</head>
+<style>
+ html,body{
+background: linear-gradient(135deg, #F8F5FF, #E9DDFB, #DCEBFA);
+background-attachment: fixed;
+}
+h1{
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: #312E81;
+    text-align: center;
+}
+h3{font-family: 'Trebuchet MS', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: #3730A3;
+	}
+p1{font-size:18px;
+   font-weight:bold;
+   }
+ 
+p{
+  border: 2px solid #5B21B6;
+    padding: 15px;
+    border-radius: 10px;
+}
+</style>
+<body>
+
+<h1>OPERATORS</h1>
+
+<h3>Write a program to show that example of pre-increment ?</h3>
+<p1>CODE</p1>
+<p>
+#include &lt;stdio.h&gt; <br>
+void main() <br>
+{<br>
+    int a = 5;<br>
+
+    printf("Value of a before increment = %d\n", a);<br>
+
+    printf("Value of a after pre-increment = %d\n", ++a);<br>
+}
+</p> 
+<p1>OUTPUT</p1>
+<p>
+Value of a before increment = 5</br>
+Value of a after pre-increment = 6</br>
+</p>
+
+<h3>Write a program to show that example of post-increment ?</h3>
+<p1>CODE</p1>
+<p>#include &lt;stdio.h&gt; </br>
+
+ void main() </br>
+{</br>
+    int a = 5;</br>
+
+    printf("Value of a before increment = %d\n", a);</br>
+
+    printf("Value of a after post-increment = %d\n", a++);</br>
+
+    printf("Value of a after increment = %d\n", a);</br>
+
+}
+</p>
+<p1>OUTPUT</p1>
+<p>
+Value of a before increment = 5</br>
+Value of a after post-increment = 5</br>
+Value of a after increment = 6</br>
+</p>
+
+<h3>Write a program to show that example of pre-decrement ?</h3>
+<p1>CODE</p1>
+<p>#include &lt;stdio.h&gt;</br>
+void main()</br>
+{</br>
+    int a = 5;</br>
+    printf("Before decrement = %d\n", a);</br>
+    --a;</br>
+    printf("After decrement = %d", a);</br>
+}
+</p>
+<p1>OUTPUT</p1>
+<p>Before decrement = 5</br>
+After decrement = 4</br>
+</P>
+
+<h3>Write a program to show that example of post-decrement ?</h3>
+<p1>CODE</p1>
+<P>#include &lt;stdio.h&gt;</br>
+
+void main()</br>
+{</br</br>
+
+    printf("Before decrement = %d\n", a);</br>
+    printf("Value after post-decrement = %d\n", a--);</br>
+    printf("After decrement = %d\n", a);</br>
+
+}</P>
+<p1>OUTPUT</p1>
+<p>Before decrement = 5</br>
+Value after post-decrement = 5</br>
+After decrement = 4</br>
+</p>
+
+<h3>Write a program to enter 2 numbers from user add the number and show the answer , again take 2 number from user subtract the number display the answer ,again take 2 number from user multiply the number display the answer and ,again take 2 number from the user divide the number display the answer ,again take 2 number find the remainder and display the answer ?</h3>
+<p1>CODE</p1>
+<p>#include &lt;stdio.h&gt;  </br>
+
+int main() </br>
+{ </br>
+    int a, b; </br>
+
+    printf("Enter two numbers for addition: ");</br>
+    scanf("%d %d", &a, &b);</br>
+    printf("Addition = %d\n", a + b);</br>
+
+    printf("Enter two numbers for subtraction: ");</br>
+    scanf("%d %d", &a, &b);</br>
+    printf("Subtraction = %d\n", a - b);</br>
+
+    printf("Enter two numbers for multiplication: ");</br>
+    scanf("%d %d", &a, &b);</br>
+    printf("Multiplication = %d\n", a * b);</br>
+
+    printf("Enter two numbers for division: ");</br>
+    scanf("%d %d", &a, &b);</br>
+    printf("Division = %d\n", a / b);</br>                                                                                                                                              
+
+    printf("Enter two numbers for remainder: ");</br>
+    scanf("%d %d", &a, &b);</br>
+    printf("Remainder = %d\n", a % b);</br>
+
+    return 0;</br>
+}</p>
+<p1>OUTPUT</p1>
+<p>Enter two numbers for addition: 10 4</br>
+Addition = 14</br>
+
+Enter two numbers for subtraction: 10 5</br>
+Subtraction = 5</br>
+
+Enter two numbers for multiplication: 10 2</br>
+Multiplication = 20</br>
+
+Enter two numbers for division: 20 10</br>
+Division = 2</br>
+
+Enter two numbers for remainder: 10 3</br>
+Remainder = 1 </br> 
+</p>
+
+<h3>Write a program to enter a number from the user ,the length of the number is depend on the user ,programmer should print the last digit of number ?</h3>
+<p1>CODE</p1>
+<p>#include &lt;stdio.h&gt;
+  </br>
+int main() </br>
+{ </br>
+    int num; </br>
+    printf("Enter a number: ");</br>
+    scanf("%d", &num);</br>
+    printf("Last digit of the number = %d\n", num % 10);</br>
+    return 0;</br>
+}</p>
+<p1>OUTPUT</p1>
+<p>Enter a number: 12345</br>
+Last digit of the number = 5</br>
+</p>
+<h3>Enter a decimal number from the user (float) and print the right hand side of the decimal point ?</h3>
+
+<h3>Enter a number from user and find out cube of numbers ?</h3>
+<p1>CODE</p1>
+<p>#include &lt;stdio.h&gt; </br>
+int main() </br>
+{</br>
+    int num, cube;</br>
+
+    printf("Enter a number: ");</br>    
+    scanf("%d", &num);</br>
+
+    cube = num * num * num;</br>
+
+    printf("Cube = %d", cube);</br>
+
+    return 0;</br>
+}
+</p>
+<p1>OUTPUT</p1>
+<p>Enter a number: 3</br>
+Cube = 27</br>
+</p>
+
+<h3>Enter float number from user and round of the number ?</h3>
+<p1>CODE</p1>
+<p>#include &lt;stdio.h&gt;</br>
+    {</br>
+    float num;</br>
+    int rounded;</br>
+
+    printf("Enter a float number: ");</br>
+    scanf("%f", &num);</br>
+
+    if (num >= 0)</br>
+        rounded = num + 0.5;</br>
+    else</br>
+        rounded = num - 0.5;</br>
+
+    printf("Rounded number = %d", rounded);</br>
+
+    return 0;</br>
+}
+</p>
+<p1>OUTPUT</p1>
+<p>Enter a float number: 3.7</br>
+Rounded number = 4</br>
+Enter a float number: -1.3</br>
+Rounded number = -1</br>
+</p>
+
+<h3>Enter a lower case character from user and print it into upper case ?</h3>
+<p1>CODE</p1>
+<p>#include &lt;stdio.h&gt;</br>
+int main() </br>
+{ </br>
+    char ch;</br>
+
+    printf("Enter a lower case character: ");</br>
+    scanf("%c", &ch);</br>
+    ch = ch-32;</br>
+    printf("Upper case character = %c", ch);</br>
+
+    return 0;</br>
+}</p>
+<p1>OUTPUT</p1>
+<p>Enter a lower case character: a</br>
+Upper case character = A</br>
+</p>
+
+<h3>Enter marks of students and calculate average of student’s marks ?</h3>
+<p1>CODE</p1>
+<p>#include &lt;stdio.h&gt;</br>
+
+int main()<br>
+{<br>
+    int m1, m2, m3, m4, m5, average;<br>
+
+    printf("Enter marks of five subjects (out of 100): ");<br>
+    scanf("%d %d %d %d %d", &m1, &m2, &m3, &m4, &m5);<br>
+
+    if (m1 >= 0 && m1 <= 100 &&<br>
+        m2 >= 0 && m2 <= 100 &&<br>
+        m3 >= 0 && m3 <= 100 &&<br>
+        m4 >= 0 && m4 <= 100 &&<br>
+        m5 >= 0 && m5 <= 100)<br>
+    {<br>
+        average = (m1 + m2 + m3 + m4 + m5) / 5;<br>
+        printf("Average marks = %d", average);<br>
+    }<br>
+    else<br>
+    {
+        printf("Invalid marks! Enter marks between 0 and 100.");<br>
+    }<br>
+
+    return 0;<br>
+}<br>
+</p>
+<p1>OUTPUT</p1>
+<p>Enter marks of five subjects (out of 100): 85 90 78 92 88</br>
+Average marks = 86</br>
+</p>
+
+<h3>Calculate simple interest = (P x R x T)/ 100</h3>
+<p1>CODE</p1>
+<p>#include &lt;stdio.h&gt;</br>
+int main() </br>
+
+{<br>
+    int p, r, t, si;<br>
+
+    printf("Enter principal amount: ");<br>
+    scanf("%d", &p);<br>
+
+    printf("Enter rate of interest: ");<br>
+    scanf("%d", &r);<br>
+
+    printf("Enter time in years: ");<br>
+    scanf("%d", &t);<br>
+
+    si = (p * r * t) / 100;<br>
+
+    printf("Simple Interest = %d", si);<br>
+
+    return 0;<br>
+}
+</p>
+<p1>OUTPUT</p1>
+<p>Enter principal amount: 5000<br>
+Enter rate of interest: 5<br>
+Enter time in years: 2<br>
+Simple Interest = 500<br>
+</p>
+
+</body>
+</html>

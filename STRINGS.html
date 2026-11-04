@@ -1,0 +1,629 @@
+<html>
+<head>
+<title>STRINGS</title>
+</head>
+<style>
+ html,body{
+background: linear-gradient(135deg, #F8F5FF, #E9DDFB, #DCEBFA);
+background-attachment: fixed;
+}
+h1{
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: #312E81;
+    text-align: center;
+}
+h3{font-family: 'Trebuchet MS', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: #3730A3;
+	}
+p1{font-size:18px;
+   font-weight:bold;
+   }
+ 
+p{
+  border: 2px solid #5B21B6;
+    padding: 15px;
+    border-radius: 10px;
+}
+</style> 
+
+<body>
+    <h1>STRINGS</h1>
+
+<h3>Enter a string from user and convert in uppercase </h3>
+<p1>CODE</p1>
+<p>
+#include &lt;stdio.h&gt;<br>
+#include &lt;conio.h&gt;<br>
+
+void main()<br>
+{<br>
+    char str[50];<br>
+    int i;<br>
+
+    clrscr();<br>
+
+    printf("Enter a string: ");<br>
+    gets(str);<br>
+
+    for(i = 0; str[i] != '\0'; i++)<br>
+    {<br>
+        if(str[i] >= 'a' && str[i] <= 'z')<br>
+        {<br>
+            str[i] = str[i] - 32;<br>
+        }<br>
+    }
+<br>
+    printf("Uppercase string: %s", str);<br>
+}
+</p>
+<p1>OUTPUT</p1>
+<p>Enter a string: hi everyone<br>
+Uppercase string: HI EVERYONE</p>
+
+<h3>Enter a string from user and convert into lowercase</h3>
+<p1>CODE</p1>
+<p>
+#include &lt;stdio.h&gt;<br>
+#include &lt;conio.h&gt;<br>
+
+void main()<br>
+{<br>
+    char str[50];<br>
+    int i;<br>
+
+    clrscr();<br>
+
+    printf("Enter a string: ");<br>
+    gets(str);<br>
+
+    for(i = 0; str[i] != '\0'; i++)<br>
+    {<br>
+        if(str[i] >= 'A' && str[i] <= 'Z')<br>
+        {<br>
+            str[i] = str[i] + 32;<br>
+        }<br>
+    }
+<br>
+    printf("Lowercase string: %s", str);<br>
+}
+</p>
+<p1>OUTPUT</p1>
+<p>Enter a string: HI EVERYONE<br>
+Lowercase string: hi everyone</p>
+
+<h3>Enter a string from user and convert into sentence case</h3>
+<p1>CODE</p1>
+<p>
+#include &lt;stdio.h&gt;<br>
+#include &lt;conio.h&gt;<br>
+
+void main()<br>
+{<br>
+    char str[50];<br>
+    int i;<br>
+
+    clrscr();<br>
+
+    printf("Enter a string: ");<br>
+    gets(str);<br>
+
+    for(i = 0; str[i] != '\0'; i++)<br>
+    {<br>
+        if(i == 0 && str[i] >= 'a' && str[i] <= 'z')<br>
+        {<br>
+            str[i] = str[i] - 32;<br>
+        }<br>
+        else if(i > 0 && str[i] >= 'A' && str[i] <= 'Z')<br>
+        {<br>
+            str[i] = str[i] + 32;<br>
+        }<br>
+    }
+<br>
+    printf("Sentence case: %s", str);<br>
+}
+</p>
+<p1>OUTPUT</p1>
+<p>Enter a string: hI EVERYONE<br>
+Sentence case: Hi everyone</p>
+
+<h3>Enter a string from user and convert into title case</h3>
+<p1>CODE</p1>
+<p>#include &lt;stdio.h&gt;<br>
+    #include&lt;conio.h&gt;<br>
+       
+    void main() <br>
+    {  <br>
+    char str[20]; int i;  <br>
+    printf("Enter a string: ");  <br>
+    gets(str);  <br>
+    for(i=0; str[i]!='\0'; i++)  <br>
+        { if(str[i]>='A' && str[i]<='Z')  <br>
+        { str[i]=str[i]+32;  <br>
+    }  <br>
+}  <br>
+    for(i=0; str[i]!='\0'; i++)  <br>
+{  <br>
+    if(i==0 || str[i-1]==' ')  <br>
+{    <br>
+    if(str[i]>='a' && str[i]<='z')  <br>
+{    <br>
+    str[i]=str[i]-32;  <br>
+}  <br>
+}  <br>
+}  <br>
+printf("Title case: %s", str);  <br> 
+}</p>
+<p1>OUTPUT</p1>
+<p>Enter a string: hI evRYoNe<br>
+Title Case: Hi Everyone</p>
+
+<h3>Enter a string from user and convert into toggle case</h3>
+<p1>CODE</p1>
+<p> #include &lt;stdio.h&gt;<br>
+    #include &lt;conio.h&gt;<br>
+    void main()<br>
+{<br>
+    char str[50];<br>
+    int i;
+<br>
+    clrscr();<br>
+
+    printf("Enter a string: ");<br>
+    gets(str);
+<br>
+    for(i = 0; str[i] != '\0'; i++)<br>
+    {<br>
+        if(str[i] >= 'a' && str[i] <= 'z')<br>
+        {<br>
+            str[i] = str[i] - 32;<br>
+        }<br>
+        else if(str[i] >= 'A' && str[i] <= 'Z')<br>
+        {<br>
+            str[i] = str[i] + 32;<br>
+        }<br>
+    }<br>
+
+    printf("Toggle Case: %s", str);<br>
+}<br>
+</p>
+<p1>OUTPUT</p1>
+<p>Enter a string: Hi Everyone<br>
+Toggle Case: hI eVERYONE</p>
+
+<h3>Enter a string from user and find its length</h3>
+<p1>CODE</p1>
+<p>
+#include &lt;stdio.h&gt;<br>
+#include &lt;conio.h&gt;<br>
+
+void main()<br>
+{<br>
+    char str[50];<br>
+    int i, length = 0;<br>
+
+    clrscr();<br>
+
+    printf("Enter a string: ");<br>
+    gets(str);<br>
+
+    for(i = 0; str[i] != '\0'; i++)<br>
+    {<br>
+        length++;<br>
+    }<br>
+
+    printf("Length of the string is: %d", length);<br>
+}
+</p>
+<p1>OUTPUT</p1>
+<p>Enter a string: Hi Everyone<br>
+Length of the string is: 11</p>
+
+<h3>Enter a string from user and compare those string</h3>
+<p1>CODE</p1>
+<p>#include &lt;stdio.h&gt;<br>
+    #include &lt;conio.h&gt;<br>
+    void main() <br>
+    { <br>
+        char a[20], b[20]; <br>
+        int i=0; <br>
+         printf("Enter first string: "); <br>
+         gets(a); <br>
+         printf("Enter second string: "); <br>
+         gets(b); <br>
+         while(a[i]!='\0' && b[i]!='\0') <br>
+         { <br>
+            if(a[i]!=b[i]) <br>
+            { <br>
+                break; <br>
+            } i++; <br>
+        }<br>
+         if(a[i]==b[i]) <br>
+        { <br>
+            printf("Both strings are equal"); <br>
+        } <br>
+        else <br>
+        { <br>
+            printf("Strings are not equal"); <br>
+        } <br>
+    }</p>
+    <p1>OUTPUT</p1>
+<p>Enter first string: hello<br>
+Enter second string: hello<br>
+Both strings are equal</p>
+
+<h3>Enter a string from user and concatenate the string</h3>
+<p1>CODE</p1>
+<p>#include &lt;stdio.h&gt;<br>
+    #include &lt;conio.h&gt;<br>
+            void main() <br>
+            { <br>
+                
+                char a[40], b[20]; <br>
+                int i=0, j=0; <br>
+                 printf("Enter first string: "); <br>
+                 gets(a); <br>
+                 printf("Enter second string: "); <br>
+                 gets(b); <br>
+                 while(a[i]!='\0') <br>
+                 { <br>
+                    i++; <br>
+                } <br>
+                while(b[j]!='\0') <br>
+                { <br>
+                    a[i]=b[j]; <br>
+                    i++; <br>
+                    j++; <br>
+                } <br>
+                a[i]='\0'; <br>
+                printf("Concatenated: %s", a); <br>
+             }</p>
+<p1>OUTPUT</p1>
+<p>Enter first string: Good<br>
+Enter second string: Morning<br>
+Concatenated: GoodMorning</p>
+
+<h3>Enter a string from user and copy that string into another string</h3>
+<p1>CODE</p1>
+<p>#include &lt;stdio.h&gt;<br>
+     #include &lt;conio.h&gt;<br> 
+            void main() <br>  
+            { <br> 
+                char a[20], b[20]; <br> 
+                int i; <br> 
+                printf("Enter a string: "); <br> 
+                gets(a); <br> 
+                for(i=0; a[i]!='\0'; i++) <br> 
+                { <br> 
+                    b[i]=a[i]; <br> 
+                } <br> 
+                b[i]='\0';<br> 
+                 printf("Copied string: %s", b); <br> 
+                  }</p>
+
+<p1>OUTPUT</p1>
+<p>Enter a string: Hello<br>
+Copied string: Hello</p>
+
+<h3>Enter the string from user ,enter a number from user ,if the user enter 0 then you will print first character of string ,if the user enter 1 then you will print second character of string ,if user enter 2 then you will print third character of string ,if user enter 3 then you point fourth character of string and if out of string then you will print out of bound</h3>
+<p1>CODE</p1>
+<p>#include &lt;stdio.h&gt;<br> 
+    #include &lt;conio.h&gt;<br>
+     void main() <br>
+     { <br>
+        char str[20]; <br>
+        int i, n, count=0; <br>
+        printf("Enter a string: "); <br>
+        gets(str); <br>
+        printf("Enter index: "); <br>
+        scanf("%d", &n); <br>
+        for(i=0; str[i]!='\0'; i++) <br>
+        { <br>
+            count++;<br>
+         } <br>
+         if(n>=0 && n< count) <br>
+         { <br>
+            printf("Character: %c", str[n]); <br>
+        } <br>
+        else <br>
+        { <br>
+            printf("Out of bound"); <br>
+        } <br>
+     }
+    </p>
+    <p1>OUTPUT</p1>
+    <p>Enter a string: HELLO<br>
+Enter index: 3<br>
+Character: L</p>
+
+<h3>Enter the string from user and print each character in new line</h3>
+<p1>CODE</p1>
+<p>#include &lt;stdio.h&gt;<br>
+     #include &lt;conio.h&gt;<br>
+    void main() <br>
+    { <br>
+        char str[20];<br>
+        int i;  <br>
+        printf("Enter a string: "); <br>
+        gets(str); <br>
+        for(i=0; str[i]!='\0'; i++) <br>
+        { <br>
+            printf("%c\n", str[i]); <br>
+        } <br>
+         }</p>
+<p1>OUTPUT</p1>
+<p>Enter a string: HELLO<br>
+H<br>
+E<br>
+L<br>
+L<br>
+O<br>
+</p>
+
+<h3>Enter the string from user and copy reverse order into another string</h3>
+<p1>CODE</p1>
+<p>#include&lt;stdio.h&gt;<br>
+    #include&lt;conio.h&gt; <br>
+        void main() <br>
+        { <br>
+            char a[20], b[20]; <br>
+            int i, j=0, count=0;  <br>
+            printf("Enter a string: "); <br>
+            gets(a); <br>
+            for(i=0; a[i]!='\0'; i++) <br>
+            { <br>
+                count++; <br>
+            } <br>
+            for(i=count-1; i>=0; i--) <br>
+            { <br>
+                b[j]=a[i]; j++; <br>
+            } <br>
+            b[j]='\0'; <br>
+            printf("Reverse: %s", b); <br>
+         }</p>
+<p1>OUTPUT</p1>
+<p>Enter a string: HELLO<br>
+Reverse: OLLEH</p>
+
+<h3>Enter two string from user and print difference each character</h3>
+<p1>CODE</p1>
+<p>#include&lt;stdio.h&gt; <br>
+        #include&lt;conio.h&gt; <br>
+             void main() <br>
+             {<br>
+                 char a[20], b[20]; <br>
+                 int i=0, count=0;<br>
+                   printf("Enter first string: ");<br>
+                   gets(a); <br>
+                   printf("Enter second string: "); <br>
+                   gets(b); <br>
+                   while(a[i]!='\0' || b[i]!='\0') <br>
+                   { <br>
+                    if(a[i]!=b[i]) <br>
+                    { <br>
+                        printf("\nDifference at index %d", i); <br>
+                        count++; <br>
+                    } i++; <br>
+                } <br>
+                if(count==0) <br>
+                { <br>
+                    printf("No difference"); <br>
+                } <br>
+                else <br>
+                { <br>
+                    printf("\nTotal differences: %d", count); <br>
+                }  <br>
+            }</p>
+<p1>OUTPUT</p1>
+<p>Enter first string: HELLO<br>
+Enter second string: HATE<br>
+
+Difference at index 1<br>
+Difference at index 2<br>
+Difference at index 3<br>
+Difference at index 4<br>
+Difference at index 5<br>
+Total differences: 5</p>
+
+<h3>Enter the string from user and enter a character , it is exist or not </h3>
+<p1>CODE</p1>
+<p>#include&lt;stdio.h&gt;<br>
+    #include&lt;conio.h&gt; <br>
+    void main() <br>
+    { <br>
+        char str[20], ch; int i, found=0;  <br>
+        printf("Enter a string: "); <br>
+        gets(str); <br>
+        printf("Enter a character: "); <br>
+        scanf(" %c", &ch);<br>
+        for(i=0; str[i]!='\0'; i++) <br>
+        { <br>
+            if(str[i]==ch) { found=1; break; <br>
+            } <br>
+        } <br>
+        if(found==1) <br>
+        { <br>
+            printf("Character exists"); <br>
+        } <br>
+        else <br>
+        { <br>
+            printf("Character does not exist"); <br>
+        } <br>
+        }</p>
+<p1>OUTPUT</p1>
+<p>Enter a string: HELLO<br>
+Enter a character: E<br>
+Character exists</p>
+
+<h3>Enter the string from user and enter a character if it is exist then print the bound number</h3>
+<p1>CODE</p1>
+<p>#include&lt;stdio.h&gt;<br>
+    #include&lt;conio.h&gt; <br>
+        void main() <br>
+        { <br>
+            char str[20], ch; <br>
+            int i, pos=0; <br>
+            printf("Enter a string: ");<br>
+            gets(str); <br>
+            printf("Enter a character: "); <br>
+            scanf(" %c", &ch); <br>
+            for(i=0; str[i]!='\0'; i++) <br>
+            { <br>
+                if(str[i]==ch) <br>
+                { <br>
+                    pos=i; break; <br>
+                } <br>
+            } <br>
+            if(pos==0) <br>
+            { <br>
+                printf("Character not found"); <br>
+            } <br>
+            else <br>
+            { <br>
+                printf("Index: %d", pos); <br>
+            }  <br>
+        }</p>
+<p1>OUTPUT</p1>
+<p>Enter a string: HELLO<br>
+Enter a character: O<br>
+Index: 4</p>
+
+<h3>Enter the string from user and count all vowels</h3>
+<p1>CODE</p1>
+<p>#include&lt;stdio.h&gt; <br>
+    #include&lt;conio.h&gt; <br>
+         void main()<br>
+         { <br>
+            char str[20]; <br>
+            int i, count=0; <br>
+            printf("Enter a string: "); <br>
+            gets(str); <br>
+            for(i=0; str[i]!='\0'; i++) <br>
+            { <br>
+                if(str[i]=='a' || str[i]=='e' || str[i]=='i' || str[i]=='o' || str[i]=='u' || str[i]=='A' || str[i]=='E' || str[i]=='I' || str[i]=='O' || str[i]=='U') <br>
+                { <br>
+                    count++; <br>
+                } <br>
+            } <br>
+            printf("Total vowels: %d", count); <br>
+            }</p>
+<p1>OUTPUT</p1>
+<p>Enter a string: HELLO<br>
+Total vowels: 2</p>
+
+<h3>Enter the string from user and enter bound number and print character on that bound</h3>
+<p1>CODE</p1>
+<p>#include&lt;stdio.h&gt; <br>
+    #include&lt;conio.h&gt;  <br>
+        void main() <br>
+        { <br>
+            char str[20]; <br>
+            int i, n, count=0; <br>
+           printf("Enter a string: "); <br>
+           gets(str); <br>
+           printf("Enter bound number: "); <br>
+           scanf("%d", &n); <br>
+           for(i=0; str[i]!='\0'; i++) <br>
+           { <br>
+            count++;<br>
+         } <br>
+         if(n>=0 && n< count) <br>
+         {<br>
+             printf("Character: %c", str[n]); <br>
+            } <br>
+            else <br>
+            { <br>
+                printf("Out of bound"); <br>
+            }<br>
+         }</p>
+<p1>OUTPUT</p1>
+<p>Enter a string: hello<br>
+Enter bound number: 1<br>
+Character: e</p>
+
+<h3>String palindrome example (using reverse) </h3>
+<p1>CODE</p1>
+<p>#include&lt;stdio.h&gt;<br>
+     #include&lt;conio.h&gt; <br>
+        #include&lt;string.h&gt; <br>
+            void main() <br>
+            { <br>
+                char str[20], rev[20]; <br>
+                int i,j;  <br>
+                printf("Enter a string: "); <br>
+                gets(str); <br>
+                j=0; <br>
+                for<br>
+                (i=strlen(str)-1;i>=0;i--) <br>
+                { <br>
+                    rev[j]=str[i]; <br>
+                    j++; <br>
+                } <br>
+                rev[j]='\0';<br>
+                 if(strcmp(str,rev)==0) <br>
+                 printf("Palindrome"); <br>
+                 else <br>
+                 printf("Not Palindrome"); <br>
+                  }</p>
+<p1>OUTPUT</p1>
+<p>Enter a string: WOW<br>
+Palindrome</p>
+
+<h3>Enter the data from user the data consist of roll no. ,name ,class , marks of 5 subjects</h3>
+<p1>CODE</p1>
+<p>#include<stdio.h> <br>
+    #include<conio.h> <br>
+         void main() <br>
+         { <br>
+            char name[20], className[20]; <br>
+            int roll, marks[5]; int i, total=0; <br>
+            float percentage; <br>
+             printf("Enter roll number: "); <br>
+             scanf("%d", &roll); <br>
+             getchar(); <br>
+             printf("Enter name: "); <br>
+             gets(name); <br>
+             printf("Enter class: "); <br>
+             gets(className); <br>
+             for(i=0; i< 5; i++) <br>
+             {<br>
+                 printf("Enter marks of subject %d: ", i+1); <br>
+                 scanf("%d", &marks[i]); <br>
+                 total=total+marks[i]; <br>
+                }<br>
+                 percentage=total/5.0;<br>
+                  printf("\nRoll number: %d", roll); <br>
+                  printf("\nName: %s", name); <br>
+                  printf("\nClass: %s", className); <br>
+                  for(i=0; i< 5; i++) <br>
+                  {<br>
+                     printf("\nSubject %d: %d", i+1, marks[i]); <br>
+                    }<br>
+                     printf("\nTotal: %d", total);<br>
+                      printf("\nPercentage: %.2f", percentage); <br>
+                     }</p>
+<p1>OUTPUT</p1>
+<p>Enter roll number: 1<br>
+Enter name: XYZ<br>
+Enter class: BCA<br>
+Enter marks of subject 1: 70<br>
+Enter marks of subject 2: 60<br>
+Enter marks of subject 3: 50<br>
+Enter marks of subject 4: 70<br>
+Enter marks of subject 5: 10<br>
+
+Roll number: 1<br>
+Name: XYZ<br>
+Class: BCA<br>
+Subject 1: 70<br>
+Subject 2: 60<br>
+Subject 3: 50<br>
+Subject 4: 70<br>
+Subject 5: 10<br>
+Total: 260<br>
+Percentage: 52.00</p>
+</body>
+</html>

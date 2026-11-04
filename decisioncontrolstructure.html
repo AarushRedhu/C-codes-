@@ -1,0 +1,701 @@
+<html>
+<head>
+<title>DECISION CONTROL STRUCTURE</title>
+</head>
+<style>
+ html,body{
+background: linear-gradient(135deg, #F8F5FF, #E9DDFB, #DCEBFA);
+background-attachment: fixed;
+}
+h1{
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: #312E81;
+    text-align: center;
+}
+h3{font-family: 'Trebuchet MS', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: #3730A3;
+	}
+p1{font-size:18px;
+   font-weight:bold;
+   }
+ 
+p{
+  border: 2px solid #5B21B6;
+    padding: 15px;
+    border-radius: 10px;
+}
+</style>
+<body>
+    <h1>DECISION CONTROL STRUCTURE</h1>
+
+<h3>Write a program to enter the number from the user and check it is positive or negative or 0 (zero)</h3>
+<p1>CODE</p1>
+<p> #include &lt;stdio.h&gt; <br>
+void main() <br>
+{<br>
+    int n;<br>
+
+    printf("Enter a number: ");<br>
+    scanf("%d", &n);<br>
+
+    if(n > 0)<br>
+    {<br>
+        printf("Positive Number");<br>
+    }<br>
+    else if(n < 0)<br>
+    {<br>
+        printf("Negative Number");<br>
+    }<br>
+    else<br>
+    {<br>
+        printf("Zero");<br>
+    }<br>
+}<br>
+</p>
+<p1>OUTPUT</p1>
+<p>Enter a number: 9<br>
+Number is positive</p>
+
+<h3>Enter a number from user and check it is odd or even </h3>
+<p1>CODE</p1>
+<p>
+#include &lt;stdio.h&gt; <br>
+void main()<br>
+{<br>
+    int n;<br>
+
+    printf("Enter a number: ");<br>
+    scanf("%d", &n);<br>
+
+    if(n % 2 == 0)<br>
+    {<br>
+        printf("Even Number");<br>
+    }<br>
+    else<br>
+    {<br>
+        printf("Odd Number");<br>
+    }<br>
+}
+</p>
+<p1>OUTPUT</p1>
+<p>Enter a number: 8<br>    
+Number is even</p>
+
+<h3>Enter a number from the user and check that it is of 1 digit or 2 digit or 3 digit or 4 digit or 5 digit</h3>
+<p1>CODE</p1>
+<p>#include &lt;stdio.h&gt;<br>
+void main() <br>
+{<br>
+    int n;<br>
+
+    printf("Enter a number: ");<br>
+    scanf("%d", &n);<br>
+
+    if(n >= 0 && n <= 9)<br>
+    {<br>
+        printf("1 Digit Number");<br>
+    }<br>
+    else if(n >= 10 && n <= 99)<br>
+    {<br>
+        printf("2 Digit Number");<br>
+    }<br>
+    else if(n >= 100 && n <= 999)<br>
+    {<br>
+        printf("3 Digit Number");<br>
+    }<br>
+    else if(n >= 1000 && n <= 9999)<br>
+    {<br>
+        printf("4 Digit Number");<br>
+    }<br>
+    else if(n >= 10000 && n <= 99999)<br>
+    {<br>
+        printf("5 Digit Number");<br>
+    }<br>
+    else<br>
+    {<br>
+        printf("Number is not between 1 and 5 digits");<br>
+    }<br>
+}
+</p>
+<p1>OUTPUT</p1>
+<p>Enter a number: 9204<br>
+Number is 4 digit</p>
+
+<h3>Enter a number from the user if the number is between 0 to 40 then we will print fail if the number is between 40 to 60 then we will print C grade ,if the number is between 60 to 80 than we will print B grade ,if the number is between 80 to 100 then we will print A grade and rest all number are invalid</h3>
+<p1>CODE</p1>
+<p>
+
+#include &lt;stdio.h&gt;<br>
+void main()<br>
+{<br>
+    int n;<br>
+
+    printf("Enter your marks: ");<br>
+    scanf("%d", &n);<br>
+
+    if(n >= 0 && n < 40)<br>
+    {<br>
+        printf("Fail");<br>
+    }<br>
+    else if(n >= 40 && n <= 60)<br>
+    {<br>
+        printf("C Grade");<br>
+    }<br>
+    else if(n > 60 && n <= 80)<br>
+    {<br>
+        printf("B Grade");<br>
+    }<br>
+    else if(n > 80 && n <= 100)<br>
+    {<br>
+        printf("A Grade");<br>
+    }<br>
+    else<br>
+    {<br>
+        printf("Invalid Marks");<br>
+    }<br>
+}
+</p>
+<p1>OUTPUT</p1>
+<p>Enter your marks: 98<br>
+A Grade</p>
+
+<h3>Enter a number from the user and check it is a decimal number or not</h3>
+<p1>CODE</p1>
+<p>
+#include &lt;stdio.h&gt;<br>
+void main()<br>
+{<br>
+    float n;<br>
+
+    printf("Enter a number: ");<br>
+    scanf("%f", &n);<br>
+
+    if(n == (int)n)<br>
+    {<br>
+        printf("Not a Decimal Number");<br>
+    }<br>
+    else<br>
+    {<br>
+        printf("Decimal Number");<br>
+    }<br>
+}
+</p>
+<p1>OUTPUT</p1>
+<p>Enter a number: 5.6<br>
+Decimal Number</p>
+
+<h3>Enter a number from the user if it is a negative then convert into positive and if it is positive then convert into negative often that print the number</h3>
+<p1>CODE</p1>
+<p>
+#include &lt;stdio.h&gt;
+void main()<br>
+{<br>
+    int n;<br>
+
+    printf("Enter a number: ");<br>
+    scanf("%d", &n);<br>
+
+    if(n < 0)<br>
+    {<br>
+        n = n * -1;<br>
+    }<br>
+    else if(n > 0)<br>
+    {<br>
+        n = n * -1;<br>
+    }<br>
+
+    printf("Converted Number = %d", n);<br>
+}
+</p>
+<p1>OUTPUT</p1>
+<p>Enter a number: -5<br>
+Converted Number = 5</p>
+
+<h3>Enter a character from the user and check that it is an alphabet </h3>
+<p1>CODE</p1>
+<p>
+#include &lt;stdio.h&gt;
+void main()<br>
+{<br>
+    char ch;<br>
+
+    printf("Enter a character: ");<br>
+    scanf("%c", &ch);<br>
+
+    if((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z'))<br>
+    {<br>
+        printf("It is an Alphabet");<br>
+    }<br>
+    else<br>
+    {<br>
+        printf("It is not an Alphabet");<br>
+    }<br>
+}
+</p>
+<p1>OUTPUT</p1>
+<p>Enter a character: A<br>
+It is an Alphabet</p>
+
+<h3>Enter a number from the user if the number is negative then square the number and if it is positive then increment the number 20 times</h3>
+<p1>CODE</p1>
+<p>
+#include &lt;stdio.h&gt;<br>
+void main()<br> 
+{<br> 
+    int n;<br> 
+
+    printf("Enter a number: ");<br> 
+    scanf("%d", &n);<br> 
+
+    if(n < 0)<br> 
+    {<br> 
+        n = n * n;<br> 
+        printf("Square = %d", n);<br> 
+    }<br> 
+    else if(n > 0)<br> 
+    {<br> 
+        n = n + 20;<br> 
+        printf("Incremented Number = %d", n);<br> 
+    }<br> 
+    else<br> 
+    {<br> 
+        printf("Number is Zero");<br> 
+    }<br> 
+}
+</p>
+<p1>OUTPUT</p1>
+<p>Enter a number: -5<br>
+Square = 25</p>
+
+<h3>Enter two number from user and check which is the greater number and print the greater number</h3>
+<p1>CODE</p1>
+<p>
+#include &lt;stdio.h&gt;<br>
+void main()<br>
+{<br>
+    int a, b;<br>
+
+    printf("Enter two numbers: ");<br>
+    scanf("%d%d", &a, &b);<br>
+
+    if(a > b)<br>
+    {<br>
+        printf("%d is Greater Number", a);<br>
+    }<br>
+    else if(b > a)<br>
+    {<br>
+        printf("%d is Greater Number", b);<br>
+    }<br>
+    else<br>
+    {<br>
+        printf("Both Numbers are Equal");<br>
+    }<br>
+}
+</p>
+<p1>OUTPUT</p1>
+<p>Enter two numbers: 10 20<br>
+20 is Greater Number</p>
+
+<h3>Enter a number from user and check it is divisible by 4 or not</h3>
+<p1>CODE</p1>
+<p>
+#include &lt;stdio.h&gt;<br>
+void main()<br>
+{<br>
+    int n;<br>
+
+    printf("Enter a number: ");<br>
+    scanf("%d", &n);<br>
+
+    if(n % 4 == 0)<br>
+    {<br>
+        printf("Number is Divisible by 4");<br>
+    }<br>
+    else<br>
+    {<br>
+        printf("Number is Not Divisible by 4");<br>
+    }<br>
+}
+</p>
+<p1>OUTPUT</p1>
+<p>Enter a number: 12<br>
+Number is Divisible by 4</p>
+
+<h3>Enter a four characters from users and check they are equal or not</h3>
+<p1>CODE</p1>
+<p>
+#include &lt;stdio.h&gt;<br>
+void main()<br>
+{<br>
+    char ch1, ch2, ch3, ch4;<br>
+
+    printf("Enter four characters: ");<br>
+    scanf("%c%c%c%c", &ch1, &ch2, &ch3, &ch4);<br>
+
+    if(ch1 == ch2 && ch2 == ch3 && ch3 == ch4)<br>
+    {<br>
+        printf("All characters are equal");<br>
+    }<br>
+    else<br>
+    {<br>
+        printf("Characters are not equal");<br>
+    }<br>
+}
+</p>
+<p1>OUTPUT</p1>
+<p>Enter four characters: b b b b<br>
+All characters are equal</p>
+
+<h3>Enter three numbers from users and tell which is greater</h3>
+<p1>CODE</p1>
+<p>
+#include &lt;stdio.h&gt;<br>
+void main()<br>
+{<br>
+    int a, b, c;<br>
+
+    printf("Enter three numbers: ");<br>
+    scanf("%d%d%d", &a, &b, &c);<br>
+
+    if(a > b) <br>
+    {<br>
+        if(a > c)<br>
+        {<br>
+            printf("%d is Greatest", a);<br>
+        }<br>
+        else<br>
+        {<br>
+            printf("%d is Greatest", c);<br>
+        }<br>
+    }<br>
+    else<br>
+    {<br>
+        if(b > c)<br>
+        {<br>
+            printf("%d is Greatest", b);<br>
+        }<br>
+        else<br>
+        {<br>
+            printf("%d is Greatest", c);<br>
+        }<br>
+    }<br>
+}
+</p>
+<p1>OUTPUT</p1>
+<p>Enter three numbers: 19 10 0<br>
+19 is Greatest</p>
+
+<h3>Enter a number from the user if the user enters 30 then print the month in which we have 30 days. If the enter 31 then print the month 31 days for 28, 29 print the month else everything is invalid</h3>
+<p1>CODE</p1>
+<p>
+#include &lt;stdio.h&gt;<br>    
+void main()<br> 
+{<br> 
+    int days;<br> 
+
+    printf("Enter number of days: ");<br> 
+    scanf("%d", &days);<br> 
+
+    if(days == 30)<br> 
+    {<br> 
+        printf("April, June, September, November");<br> 
+    }<br> 
+    else if(days == 31)<br> 
+    {<br> 
+        printf("January, March, May, July, August, October, December");<br> 
+    }<br> 
+    else if(days == 28 || days == 29)<br> 
+    {<br> 
+        printf("February");<br> 
+    }<br> 
+    else<br> 
+    {<br> 
+        printf("Invalid");<br> 
+    }<br> 
+}
+</p>
+<p1>OUTPUT</p1>
+<p>Enter number of days: 28<br>
+February</p>
+
+<h3>Enter one digit number from user and print in words</h3>
+<p1>CODE</p1>
+<p>
+#include &lt;stdio.h&gt;
+void main()<br>
+{<br>
+    int n;<br>
+
+    printf("Enter a one digit number: ");<br>
+    scanf("%d", &n);<br>
+
+    if(n == 0)<br>
+    {<br>
+        printf("Zero");<br>
+    }<br>
+    else if(n == 1)<br>
+    {<br>
+        printf("One");<br>
+    }<br>
+    else if(n == 2)<br>
+    {<br>
+        printf("Two");<br>
+    }<br>
+    else if(n == 3)<br>
+    {<br>
+        printf("Three");<br>
+    }<br>
+    else if(n == 4)<br>
+    {<br>
+        printf("Four");<br>
+    }<br>
+    else if(n == 5)<br>
+    {<br>
+        printf("Five");<br>
+    }<br>
+    else if(n == 6)<br>
+    {<br>
+        printf("Six");<br>
+    }<br>
+    else if(n == 7)<br>
+    {<br>
+        printf("Seven");<br>
+    }<br>
+    else if(n == 8)<br>
+    {<br>
+        printf("Eight");<br>
+    }<br>
+    else if(n == 9)<br>
+    {<br>
+        printf("Nine");<br>
+    }<br>
+    else<br>
+    {<br>
+        printf("Invalid number");<br>
+    }<br>
+}
+</p>
+<p1>OUTPUT</p1>
+<p>Enter a one digit number: 9<br>
+Nine</p>
+
+<h3>Enter two characters from user and check both are same or not, if not same then find out difference between them</h3>
+<p1>CODE</p1>
+<p></p>
+
+<h3>Enter two digit number from user and print it in word (like 50 will be five zero)</h3>
+<p1>CODE</p1>
+<p>
+#include &lt;stdio.h&gt;<br>
+void main()<br>
+{<br>
+    int n, a, b;<br>
+
+    printf("Enter a two digit number: ");<br>
+    scanf("%d", &n);<br>
+
+    if(n >= 10 && n <= 99)<br>
+    {<br>
+        a = n / 10;<br>
+        b = n % 10;<br>
+
+        if(a == 1)<br>
+            printf("One ");<br>
+        else if(a == 2)<br>
+            printf("Two ");<br>
+        else if(a == 3)<br>
+            printf("Three ");<br>
+        else if(a == 4)<br>
+            printf("Four ");<br>
+        else if(a == 5)<br>
+            printf("Five ");<br>
+        else if(a == 6)<br>
+            printf("Six ");<br>
+        else if(a == 7)<br>
+            printf("Seven ");<br>
+        else if(a == 8)<br>
+            printf("Eight ");<br>
+        else if(a == 9)<br>
+            printf("Nine ");<br>
+
+        if(b == 0)<br>
+            printf("Zero");<br>
+        else if(b == 1)<br>
+            printf("One");<br>
+        else if(b == 2)<br>
+            printf("Two");<br>
+        else if(b == 3)<br>
+            printf("Three");<br>
+        else if(b == 4)<br>
+            printf("Four");<br>
+        else if(b == 5)<br>
+            printf("Five");<br>
+        else if(b == 6)<br>
+            printf("Six");<br>
+        else if(b == 7)<br>
+            printf("Seven");<br>
+        else if(b == 8)<br>
+            printf("Eight");<br>
+        else if(b == 9)<br>
+            printf("Nine");<br>
+    }<br>
+    else<br>
+    {<br>
+        printf("Invalid number");<br>
+    }<br>
+}
+</p>
+<p1>OUTPUT</p1>
+<p>Enter a two digit number: 26<br>
+Two Six
+</p>
+
+<h3>Enter a character from user and it is in upper case, lower case, special characters or numbers</h3>
+<p1>CODE</p1>
+<p>
+#include &lt;stdio.h&gt;
+void main()<br>
+{<br>
+    char ch;<br>
+
+    printf("Enter a character: ");<br>
+    scanf("%c", &ch);<br>
+
+    if(ch >= 'A' && ch <= 'Z')<br>
+    {<br>
+        printf("Uppercase character");<br>
+    }<br>
+    else if(ch >= 'a' && ch <= 'z')<br>
+    {<br>
+        printf("Lowercase character");<br>
+    }<br>
+    else if(ch >= '0' && ch <= '9')<br>
+    {<br>
+        printf("Number");<br>
+    }<br>
+    else<br>
+    {<br>
+        printf("Special character");<br>
+    }<br>
+}
+</p>
+<p1>OUTPUT</p1>
+<p>
+Enter a character: b<br>
+Lowercase character
+</p>
+
+<h3>Enter the year from user and check its leap year or not</h3>
+<p1>CODE</p1>
+<p>
+#include &lt;stdio.h&gt;<br>
+void main()<br>
+{<br>
+    int year;<br>
+
+    printf("Enter a year: ");<br>
+    scanf("%d", &year);<br>
+
+    if(year % 400 == 0)<br>
+    {<br>
+        printf("Leap year");<br>
+    }<br>
+    else if(year % 100 == 0)<br>
+    {<br>
+        printf("Not a leap year");<br>
+    }<br>
+    else if(year % 4 == 0)<br>
+    {<br>
+        printf("Leap year");<br>
+    }<br>
+    else<br>
+    {<br>
+        printf("Not a leap year");<br>
+    }<br>
+}
+</p>
+<p1>OUTPUT</p1>
+<p>Enter a year: 2000<br>
+Leap year</p>
+
+<h3>Enter date, month, year and check it is valid date or not </h3>
+<p1>CODE</p1>
+<P>
+#include &lt;stdio.h&gt;<br>
+void main()<br>
+{<br>
+    int date, month, year;<br>
+
+    printf("Enter date, month and year: ");<br>
+    scanf("%d%d%d", &date, &month, &year);<br>
+
+    if(month >= 1 && month <= 12)<br>
+    {<br>
+        if(month == 2)<br>
+        {<br>
+            if(year % 400 == 0 || (year % 4 == 0 && year % 100 != 0))<br>
+            {<br>
+                if(date >= 1 && date <= 29)<br>
+                    printf("Valid date");<br>
+                else<br>
+                    printf("Invalid date");<br>
+            }<br>
+            else<br>
+            {<br>
+                if(date >= 1 && date <= 28)<br>
+                    printf("Valid date");<br>
+                else<br>
+                    printf("Invalid date");<br>
+            }<br>
+        }<br>
+        else if(month == 4 || month == 6 || month == 9 || month == 11)<br>
+        {<br>
+            if(date >= 1 && date <= 30)<br>
+                printf("Valid date");<br>
+            else<br>
+                printf("Invalid date");<br>
+        }<br>
+        else<br>
+        {<br>
+            if(date >= 1 && date <= 31)<br>
+                printf("Valid date");<br>
+            else<br>
+                printf("Invalid date");<br>
+        }<br>
+    }<br>
+    else<br>
+    {<br>
+        printf("Invalid date");<br>
+    }<br>
+}
+</P>
+<p1>OUTPUT</p1>
+<p>Enter date, month and year: 29 2 2023<br>
+Invalid date</p>
+
+<h3>Write a program to calculate area and perimeter of rectangle</h3>
+<p1>CODE</p1>
+<p>
+#include &lt;stdio.h&gt;<br>
+void main()<br>
+{<br>
+    int length, breadth, area, perimeter;<br>
+
+    printf("Enter length and breadth: ");<br>
+    scanf("%d%d", &length, &breadth);<br>
+
+    area = length * breadth;<br>
+    perimeter = 2 * (length + breadth);<br>
+
+    printf("Area of rectangle = %d\n", area);<br>
+    printf("Perimeter of rectangle = %d", perimeter);<br>
+}
+</p>
+<p1>OUTPUT</p1>
+<p>Enter length and breadth: 10 5<br>
+Area of rectangle = 50<br>
+Perimeter of rectangle = 30</p>

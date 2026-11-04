@@ -1,0 +1,207 @@
+<html>
+<head>
+<title>RECURSION</title>
+</head>
+<style>
+ html,body{
+background: linear-gradient(135deg, #F8F5FF, #E9DDFB, #DCEBFA);
+background-attachment: fixed;
+}
+h1{
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: #312E81;
+    text-align: center;
+}
+h3{font-family: 'Trebuchet MS', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: #3730A3;
+	}
+p1{font-size:18px;
+   font-weight:bold;
+   }
+ 
+p{
+  border: 2px solid #5B21B6;
+    padding: 15px;
+    border-radius: 10px;
+}
+</style> 
+<body>
+
+    <h1>FILE HANDLING</h1>
+
+<h3>Enter a file name from the user and the data from the user and put it in file</h3>
+<p1>CODE</p1>
+<p>#include &lt;stdio.h&gt;<br>
+#include &lt;conio.h&gt;<br>
+
+void main()<br>
+{<br>
+    FILE *fp;<br>
+    char fname[50], data[100];<br>
+
+    clrscr();<br>
+
+    printf("Enter file name: ");<br>
+    scanf("%s", fname);<br>
+
+    fp = fopen(fname, "w");<br>
+
+    printf("Enter data: ");<br>
+    scanf(" %[^\n]", data);<br>
+
+    fprintf(fp, "%s", data);<br>
+
+    fclose(fp);<br>
+
+    printf("Data successfully stored in file.");<br>
+
+}</p>
+<p1>OUTPUT</p1>
+<p>Enter file name: student.txt<br>
+Enter data: Hello, I am a BCA student.<br>
+Data successfully stored in file.</p>
+
+<h3>Enter the file name from the user and the data from the user and put it in file. But data should be in capital letters</h3>
+<p1>CODE</p1>
+<p>#include &lt;stdio.h&gt;<br>
+#include &lt;conio.h&gt;<br>
+#include &lt;string.h&gt;<br>
+
+void main()<br>
+{<br>
+    FILE *fp;<br>
+    char fname[50], data[100];<br>
+    int i;<br>
+
+    clrscr();<br>
+
+    printf("Enter file name: ");<br>
+    scanf("%s", fname);<br>
+
+    fp = fopen(fname, "w");<br>
+
+    printf("Enter data: ");<br>
+    scanf(" %[^\n]", data);<br>
+
+    for(i = 0; data[i] != '\0'; i++)<br>
+    {<br>
+        if(data[i] >= 97 && data[i] <= 122)<br>
+        {<br>
+            data[i] = data[i] - 32;<br>
+        }<br>
+    }<br>
+
+    fprintf(fp, "%s", data);<br>
+
+    fclose(fp);<br>
+
+    printf("Data stored in capital letters.");<br>
+
+}</p>
+<p1>OUTPUT</p1>
+<p>Enter file name: code<br>
+Enter data: Iam bca student<br>
+Data stored in capital letters.</p>
+
+<h3>Enter the file name from the user and the data from the user till the user wants to enter.</h3>
+<p1>CODE</p1>
+<p>#include &lt;stdio.h&gt;<br>
+    #include &lt;conio.h&gt;<br>
+
+void main()<br>
+{<br>
+    FILE *fp;<br>
+    char fname[50], data[100];<br>
+    char choice;<br>
+
+    clrscr();<br>
+
+    printf("Enter file name: ");<br>
+    scanf("%s", fname);<br>
+
+    fp = fopen(fname, "w");<br>
+
+    do<br>
+    {<br>
+        printf("Enter data: ");<br>
+        scanf(" %[^\n]", data);<br>
+
+        fprintf(fp, "%s\n", data);<br>
+
+        printf("Do you want to enter more data? (y/n): ");<br>
+        scanf(" %c", &choice);<br>
+
+    } while(choice == 'y' || choice == 'Y');<br>
+
+    fclose(fp);<br>
+
+    printf("\nData successfully stored in file.");<br>
+
+}</p>
+
+<p1>OUTPUT</p1>
+<p>Enter file name: student.txt<br>
+
+Enter data: Hello<br>
+Do you want to enter more data? (y/n): y<br>
+
+Enter data: I am a BCA student<br>
+Do you want to enter more data? (y/n): y<br>
+
+Enter data: Learning C programming<br>
+Do you want to enter more data? (y/n): n<br>
+
+Data successfully stored in file.</p>
+
+<h3>Enter the file name from the user and the data from the user and rename that file. But rename should be by user</h3>
+<p1>CODE</p1>
+<p>#include &lt;stdio.h&gt;<br>
+#include &lt;conio.h&gt;<br>
+
+void main()<br>
+{<br>
+    FILE *fp1, *fp2;<br>
+    char fname1[50], fname2[50], data[100];<br>
+
+    clrscr();<br>
+
+    printf("Enter file name: ");<br>
+    scanf("%s", fname1);<br>
+
+    fp1 = fopen(fname1, "w");<br>
+
+    printf("Enter data: ");<br>
+    scanf("%s", data);<br>
+
+    fprintf(fp1, "%s", data);<br>
+    fclose(fp1);<br>
+
+    printf("Enter new file name: ");<br>
+    scanf("%s", fname2);<br>
+
+    fp1 = fopen(fname1, "r");<br>
+    fp2 = fopen(fname2, "w");<br>
+
+    fscanf(fp1, "%s", data);<br>
+    fprintf(fp2, "%s", data);<br>
+
+    fclose(fp1);<br>
+    fclose(fp2);<br>
+
+    remove(fname1);<br>
+
+    printf("File name changed successfully.");<br>
+
+}</p>
+<p1>OUTPUT</p1>
+<p>Enter file name: abc<br>
+Enter data: hey<br>
+Enter new file name: xyz<br>
+File name changed successfull.</p>
+
+</body>
+</html>

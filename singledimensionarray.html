@@ -1,0 +1,495 @@
+<html>
+<head>
+<title>Single Dimension Array</title>
+</head>
+<style>
+ html,body{
+background: linear-gradient(135deg, #F8F5FF, #E9DDFB, #DCEBFA);
+background-attachment: fixed;
+}
+h1{
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: #312E81;
+    text-align: center;
+}
+h3{font-family: 'Trebuchet MS', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: #3730A3;
+	}
+p1{font-size:18px;
+   font-weight:bold;
+   }
+ 
+p{
+  border: 2px solid #5B21B6;
+    padding: 15px;
+    border-radius: 10px;
+}
+</style>
+<body>
+    <h1>Single Dimension Array</h1>
+
+<h3>Enter an array from user and display all the value </h3>
+<p1>CODE</p1>
+<p> #include &lt;stdio.h&gt; <br>
+void main()<br>
+{<br>
+    int a[5], i;<br>
+<br>
+    printf("Enter 5 numbers:\n");<br>
+<br>
+    for (i = 0; i < 5; i++)<br>
+    {<br>
+        scanf("%d", &a[i]);<br>
+    }<br>
+<br>
+    printf("Array elements are:\n");<br>
+<br>
+    for (i = 0; i < 5; i++)<br>
+    {<br>
+        printf("%d\n", a[i]);<br>
+    }<br>
+}<br>
+</p>
+<p1>OUTPUT</p1>
+<p>Enter 5 numbers:<br>
+10<br>
+20<br>
+30<br>
+40<br>
+50<br>
+Array elements are:<br>
+10<br>
+20<br>
+30<br>
+40<br>
+50</p>
+
+<h3>Enter an array from user and print the array in reverse order</h3>
+<p1>CODE</p1>
+<p> #include &lt;stdio.h&gt; <br>
+  
+void main()<br>
+{<br>
+    int a[5], i;<br>
+<br>
+    printf("Enter 5 numbers:\n");<br>
+<br>
+    for (i = 0; i < 5; i++)<br>
+    {<br>
+        scanf("%d", &a[i]);<br>
+    }<br>
+<br>
+    printf("Array in reverse order:\n");<br>
+<br>
+    for (i = 4; i >= 0; i--)<br>
+    {<br>
+        printf("%d\n", a[i]);<br>
+    }<br>
+}<br>
+</p>
+<p1>OUTPUT</p1>
+<p>Enter 5 numbers:<br>
+10<br>
+20<br>
+30<br>
+40<br>
+50<br>
+Array in reverse order:<br>
+50<br>
+40<br>
+30<br>
+20<br>
+10</p>
+
+<h3>Enter an array from user and copy the array into second array </h3>
+<p1>CODE</p1>
+<p> #include &lt;stdio.h&gt; <br>
+
+void main()<br>
+{<br>
+    int a[5], b[5], i;<br>
+<br>
+    printf("Enter 5 numbers:\n");<br>
+
+    for (i = 0; i < 5; i++)<br>
+    {<br>
+        scanf("%d", &a[i]);<br>
+    }<br>
+
+    for (i = 0; i < 5; i++)<br>
+    {<br>
+        b[i] = a[i];<br>
+    }<br>
+
+    printf("Elements of second array are:\n");<br>
+
+    for (i = 0; i < 5; i++)<br>
+    {<br>
+        printf("%d\n", b[i]);<br>
+    }<br>
+}<br>
+<p1>OUTPUT</p1>
+<p>Enter 5 numbers:<br>
+10<br>
+20<br>
+30<br>
+40<br>
+50<br>
+Elements of second array are:<br>
+10<br>
+20<br>
+30<br>
+40<br>
+50</p>
+
+<h3>Enter an array from user and copy it into another array in reverse order </h3>
+<p1>CODE</p1>
+<p>#include &lt;stdio.h&gt;<br>
+
+void main()<br>
+{<br>
+    int a[5], b[5], i;<br>
+<br>
+    printf("Enter 5 numbers:\n");<br>
+<br>
+    for (i = 0; i < 5; i++)<br>
+    {<br>
+        scanf("%d", &a[i]);<br>
+    }<br>
+
+    for (i = 0; i < 5; i++)<br>
+    {<br>
+        b[i] = a[4 - i];<br>
+    }<br>
+
+    printf("Second array in reverse order:\n");<br>
+
+    for (i = 0; i < 5; i++)<br>
+    {<br>
+        printf("%d\n", b[i]);<br>
+    }<br>
+}<br></p> 
+<p1>OUTPUT</p1>
+<p>Enter 5 numbers:<br>
+10<br>
+20<br>
+30<br>
+40<br>
+50<br>
+Second array in reverse order:<br>
+50<br>
+40<br>
+30<br>
+20<br>
+10</p>
+
+<h3>Enter an array from user and print the number which is even </h3>
+<p1>CODE</p1>
+<p>#include &lt;stdio.h&gt; <br>
+
+void main()<br>
+{<br>
+    int a[5], i;<br>
+
+    printf("Enter 5 numbers:\n");<br>
+
+    for (i = 0; i < 5; i++)<br>
+    {<br>
+        scanf("%d", &a[i]);<br>
+    }<br>
+
+    printf("Even numbers are:\n");<br>
+
+    for (i = 0; i < 5; i++)<br>
+    {<br>
+        if (a[i] % 2 == 0)<br>
+        {<br>
+            printf("%d\n", a[i]);<br>
+        }<br>
+    }<br>
+}<br></p>
+<p1>OUTPUT</p1>
+<p>Enter 5 numbers:<br>
+Enter 5 numbers:<br>
+5<br>
+15<br>
+20<br>
+7<br>
+16<br>
+Even numbers are:<br>
+20<br>
+16<br>
+</p>
+
+<h3>Enter an array from user and print the number which is positive </h3>
+<p1>CODE</p1>
+<p>#include &lt;stdio.h&gt; <br>
+    void main()<br>
+{<br>
+    int a[5], i;<br>
+    printf("Enter 5 numbers:\n");<br>
+    for (i = 0; i < 5; i++)<br>
+    {<br>
+        scanf("%d", &a[i]);<br>
+    }<br>
+    printf("Positive numbers are:\n");<br>
+    for (i = 0; i < 5; i++)<br>
+    {<br>
+        if (a[i] > 0)<br>
+        {<br>
+            printf("%d\n", a[i]);<br>
+        }<br>
+    }<br>
+}<br>
+</p>
+<p1>OUTPUT</p1>
+<p>Enter 5 numbers:<br>
+40<br>
+-7<br>
+3<br>
+-2<br>
+0<br>
+Positive numbers are:<br>
+40<br>
+3</p>
+
+<h3>Enter an array from user and square all the values of array </h3>
+<p1>CODE</p1>
+<p>#include &lt;stdio.h&gt; <br>
+   void main()<br>
+{<br>
+    int a[5], i;<br>
+    printf("Enter 5 numbers:\n");<br>
+    for (i = 0; i < 5; i++)<br>
+    {<br>
+        scanf("%d", &a[i]);<br>
+    }<br>
+    for (i = 0; i < 5; i++)<br>
+    {<br>
+        a[i] = a[i] * a[i];<br>
+    }<br>
+    printf("Square of array elements:\n");<br>
+    for (i = 0; i < 5; i++)<br>
+    {<br>
+        printf("%d\n", a[i]);<br>
+    }<br>
+}<br>
+</p>
+<p1>OUTPUT</p1>
+<p>Enter 5 numbers:<br>
+2<br>
+3<br>
+4<br>
+5<br>
+6<br>
+Square of array elements:<br>
+4<br>
+9<br>
+16<br>
+25<br>
+36</p>
+
+<h3>Enter 5 values of array from user and print odd number of array</h3>
+<p1>CODE</p1>
+<p>#include &lt;stdio.h&gt; <br>
+
+void main()<br>
+{<br>
+    int a[5], i;<br>
+    printf("Enter 5 numbers:\n");<br>
+    for (i = 0; i < 5; i++)<br>
+    {<br>
+        scanf("%d", &a[i]);<br>
+    }<br>
+    printf("Odd numbers are:\n");<br>
+    for (i = 0; i < 5; i++)<br>
+    {<br>
+        if (a[i] % 2 != 0)<br>
+        {<br>
+            printf("%d\n", a[i]);<br>
+        }<br>
+    }<br>
+}<br></p>
+<p1>OUTPUT</p1>
+<p>Enter 5 numbers:<br>
+4<br>
+13<br>
+2<br>
+7<br>
+9<br>
+Odd numbers are:<br>
+13<br>
+7<br>
+9<br>
+</p>
+
+<h3>Enter 5 values of array from user and add all values</h3>
+<p1>CODE</p1>
+<p>#include &lt;stdio.h&gt; <br>
+    void main()<br>
+{<br>
+    int a[5], i, sum = 0;<br>
+    printf("Enter 5 numbers:\n");<br>
+    for (i = 0; i < 5; i++)<br>
+    {<br>
+        scanf("%d", &a[i]);<br>
+    }<br>
+    for (i = 0; i < 5; i++)<br>
+    {<br>
+        sum = sum + a[i];<br>
+    }<br>
+    printf("Sum = %d", sum);<br>
+}<br>
+</p>
+<p1>OUTPUT</p1>
+<p>Enter 5 numbers:<br>
+10<br>
+15<br>
+60<br>
+40<br>
+5<br>
+Sum = 130<br>
+</p>
+
+<h3>Enter 5 values of array from user, enter a value from user and search this value in array, if value is found then print “found” or not then print “not found”</h3>
+<p1>CODE</p1>
+<p>#include &lt;stdio.h&gt; <br>
+void main()<br>
+{<br>
+    int a[5], i, n, found = 0;<br>
+    printf("Enter 5 numbers:\n");<br>
+    for (i = 0; i < 5; i++)<br>
+    {<br>
+        scanf("%d", &a[i]);<br>
+    }<br>
+    printf("Enter number to search: ");<br>
+    scanf("%d", &n);<br>
+    for (i = 0; i < 5; i++)<br>
+    {<br>
+        if (a[i] == n)<br>
+        {<br>
+            found = 1;<br>
+        }<br>
+    }<br>
+    if (found == 1)<br>
+        printf("Found");<br>
+    else<br>
+        printf("Not found");<br>
+}<br></p>
+<p1>OUTPUT</p1>
+<p>Enter 5 numbers:<br>
+10<br>
+20<br>
+30<br>
+40<br>
+50<br>
+Enter number to search: 60<br>
+Not found
+</p>
+<h3>Enter five values of array and sort in ascending order </h3>
+<p1>CODE</p1>
+<p>#include &lt;stdio.h&gt; 
+void main()<br>
+{<br>
+    int a[5], i, j, temp;<br>
+    printf("Enter 5 numbers:\n");<br>
+    for (i = 0; i < 5; i++)<br>
+    {<br>
+        scanf("%d", &a[i]);<br>
+    }<br>
+    for (i = 0; i < 5; i++)<br>
+    {<br>
+        for (j = i + 1; j < 5; j++)<br>
+        {<br>
+            if (a[i] > a[j])<br>
+            {<br>
+                temp = a[i];<br>
+                a[i] = a[j];<br>
+                a[j] = temp;<br>
+            }<br>
+        }<br>
+    }<br>
+    printf("Ascending order:\n");<br>
+    for (i = 0; i < 5; i++)<br>
+    {<br>
+        printf("%d\n", a[i]);<br>
+    }<br>
+}<br>
+</p>
+<p1>OUTPUT</p1>
+<p> Enter 5 numbers:<br>
+50<br>
+20<br>
+40<br>
+10<br>
+30<br>
+Ascending order:<br>
+10<br>
+20<br>
+30<br>
+40<br>
+50</p> 
+
+<h3>Find maximum values of array </h3>
+<p1>CODE</p1>
+<p>#include &lt;stdio.h&gt;<br>
+void main()<br>
+{<br>
+    int a[5], i, max;<br>
+    printf("Enter 5 numbers:\n");<br>
+    for (i = 0; i < 5; i++)<br>
+    {<br>
+        scanf("%d", &a[i]);<br>
+    }<br>
+    max = a[0];<br>
+    for (i = 1; i < 5; i++)<br>
+    {<br>
+        if (a[i] > max)<br>
+        {<br>
+            max = a[i];<br>
+        }<br>
+    }<br>
+    printf("Maximum value = %d", max);<br>
+}<br></p>
+<P1>OUTPUT</P1>
+<p>Enter 5 numbers:<br>
+10<br>
+50<br>
+30<br>
+20<br>
+40<br>
+Maximum value = 50</p>
+
+<h3>Find minimum values of array</h3>
+<p1>CODE</p1>
+<p>#include &lt;stdio.h&gt; <br>
+void main()<br>
+{<br>
+    int a[5], i, min;<br>
+    printf("Enter 5 numbers:\n");<br>
+    for (i = 0; i < 5; i++)<br>
+    {<br>
+        scanf("%d", &a[i]);<br>
+    }<br>
+    min = a[0];<br>
+    for (i = 1; i < 5; i++)<br>
+    {<br>
+        if (a[i] < min)<br>
+        {<br>
+            min = a[i];<br>
+        }<br>
+    }<br>
+    printf("Minimum value = %d", min);<br>
+}<br></p>
+<p1>OUTPUT</p1>
+<P>Enter 5 numbers:<br>
+10<br>
+50<br>
+30<br>
+20<br>
+40<br>
+Minimum value = 10</P>

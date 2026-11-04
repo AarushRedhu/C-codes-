@@ -1,0 +1,117 @@
+<html>
+<head>
+<title>POINTERS</title>
+</head>
+<style>
+ html,body{
+background: linear-gradient(135deg, #F8F5FF, #E9DDFB, #DCEBFA);
+background-attachment: fixed;
+}
+h1{
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: #312E81;
+    text-align: center;
+}
+h3{font-family: 'Trebuchet MS', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: #3730A3;
+	}
+p1{font-size:18px;
+   font-weight:bold;
+   }
+ 
+p{
+  border: 2px solid #5B21B6;
+    padding: 15px;
+    border-radius: 10px;
+}
+</style> 
+<body>
+
+    <h1>POINTERS</h1>
+
+<h3>Write a program in which a pointer points to an array and insert value from user through pointer</h3>
+<p1>CODE</p1>
+<p>#include &lt;stdio.h&gt;<br>
+
+void main()<br>
+{<br>
+	int a[5], i;<br>
+	int *p;<br>
+
+	p = a;<br>
+
+	for(i = 1; i <= 5; i++)<br>
+	{<br>
+		printf("Enter %d value: ", i);<br>
+		scanf("%d", p);<br>
+		p++;<br>
+	}<br>
+
+	p = a;<br>
+
+	printf("\nArray values: ");<br>
+	for(i = 1; i <= 5; i++)<br>
+	{<br>
+		printf("%d ", *p);<br>
+		p++;<br>
+	}<br>
+}</p>
+<p1>OUTPUT</p1>
+<p>Enter 1 value: 55<br>
+Enter 2 value: 66<br>
+Enter 3 value: 77<br>
+Enter 4 value: 88<br>
+Enter 5 value: 99<br>
+
+Array values: 55 66 77 88 99</p>
+
+<h3>Write a program to input and display the elements of a 2D array of size 2 x 3 using a pointer</h3>
+<p1>CODE</p1>
+<p>#include &lt;stdio.h&gt;<br>
+
+void main()<br>
+{<br>
+	int a[2][3], i, j;<br>
+	int *p;<br>
+
+	p = a;<br>
+
+	for(i = 1; i <= 6; i++)<br>
+	{<br>
+		printf("Enter %d value: ", i);<br>
+		scanf("%d", p);<br>
+		p++;<br>
+	}<br>
+
+	p = a;<br>
+
+	printf("\nArray values: \n");<br>
+	for(i = 0; i < 2; i++)<br>
+	{<br>
+		for(j = 0; j < 3; j++)<br>
+		{<br>
+			printf("%d ",*p);<br>
+			p++;<br>
+		}<br>
+		printf("\n");<br>
+	}<br>
+}</p>
+
+<p1>OUTPUT</p1>
+<P>Enter 1 value: 22<br>
+Enter 2 value: 33<br>
+Enter 3 value: 44<br>
+Enter 4 value: 55<br>
+Enter 5 value: 66<br>
+Enter 6 value: 77<br>
+
+Array values: <br>
+22 33 44 <br>
+55 66 77<br>
+</P>
+</body>
+</html>
